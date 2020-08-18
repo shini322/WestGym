@@ -66,14 +66,16 @@ function showYaMaps(){
 }
 
 
-if ( $(window).width() < 1025 ){
+
     $(".menu__list li a").on("click",  function (event) {
         event.preventDefault();
-        $('.header__menu').slideToggle()
-        $('.nav-toggle').toggleClass('opened')
+        if ( $(window).width() < 1025 ){
+            $('.header__menu').slideToggle()
+            $('.nav-toggle').toggleClass('opened')
+        }
         var id  = $(this).attr('href'),
             top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 400);
     });
-}
+
 

@@ -1045,7 +1045,7 @@ button {
         background-size: cover;
 
         @include for-xl {
-            padding: 100px 70px 40px 100px;
+            padding: 100px 70px 40px 117px;
             flex-direction: column;
         }
 
@@ -1057,7 +1057,7 @@ button {
 
         @include for-md-mob {
             margin-top: 0;
-            padding: 50px 20px;
+            padding: 50px 5px;
         }
     }
 
@@ -1065,13 +1065,17 @@ button {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-
+        padding-right: 114px;
+        flex-shrink: 0;
         @include for-xl {
-            flex-direction: row;
+            padding-right: 0;
             flex-wrap: wrap;
         }
         @include for-lg{
             flex-direction: column;
+        }
+        @include for-md-mob{
+            padding: 0 20px;
         }
 
         
@@ -1096,10 +1100,9 @@ button {
             }
         }
         @include for-xl {
-            width: 32.333333%;
+            width: 100%;
         }
         @include for-lg {
-            width: 100%;
         }
     }
     &__choose-item {
@@ -1120,10 +1123,10 @@ button {
         @include for-xl {
             font-size: 40px;
             line-height: 44px;
+            width: 100%;
         }
 
         @include for-md {
-            width: 100%;
         }
 
         @include for-sm {
@@ -1145,13 +1148,12 @@ button {
         margin-top: 54px;
 
         @include for-xl {
-            margin-top: 0;
-            margin-left: 10px;
+            margin-left: 0;
+            margin-top: 20px;
         }
 
         @include for-lg {
-            margin-left: 0;
-            margin-top: 20px;
+            
         }
 
         @include for-md-mob {
@@ -1205,7 +1207,6 @@ button {
     &__block {
         width: 100%;
         max-width: 834px;
-        margin-left: 114px;
         @include for-xl {
             margin-left: 0;
             margin: 40px auto 0;
@@ -1219,10 +1220,7 @@ button {
             
         }
         iframe{
-            @include for-sm{
-                transform: scale(.8);
-                transform-origin: top center;
-            }
+            
         }
     }
 
@@ -1492,20 +1490,20 @@ button {
     &__table-block {
         margin-top: 50px;
         margin-left: 65px;
-        overflow-x: scroll;
         max-width: 1400px;
         border: 1px solid #a2a2a2;
         width: 100%;
-
+        
         @include for-xl {
             width: auto;
             margin: 50px auto 0;
         }
-
+        
         @include for-md {
             margin: 50px auto 0;
         }
         @include for-md-mob{
+            overflow-x: scroll;
             width: 100%;
         }
 
@@ -1514,7 +1512,6 @@ button {
 
     &__table {
         width: 100%;
-        overflow: scroll;
         font-family: 'Open Sans', sans-serif;
         font-size: 26px;
         line-height: 30px;
@@ -1574,6 +1571,7 @@ button {
         &:last-child {
             text-align: center;
             padding-right: 10px;
+            padding-left: 10px;
         }
 
         @include for-md {
@@ -1583,7 +1581,7 @@ button {
             line-height: 22px;
         }
 
-        @include for-sm {
+        @include for-md-mob {
             padding: 5px !important;
             font-size: 12px;
             line-height: 16px;
