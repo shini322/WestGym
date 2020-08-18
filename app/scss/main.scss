@@ -764,11 +764,15 @@ button {
 
     @include for-md {
         transform: scale(.7) translateY(-50%);
+        transform-origin: center 0;
+    }
+    @include for-sm {
+        transform: scale(.5) translateY(-50%);
+    }
+    @include for-md-mob {
+        transform: scale(.4) translateY(-50%);
     }
 
-    @include for-sm {
-        display: none !important;
-    }
 
     &__next {
         background-image: url(../images/icons/arrow-right.png);
@@ -776,6 +780,12 @@ button {
 
         @include for-lg {
             right: 70px;
+        }
+        @include for-sm{
+            right: 20px;
+        }
+        @include for-md-mob{
+            right: -24px;
         }
     }
 
@@ -785,6 +795,12 @@ button {
 
         @include for-lg {
             left: 70px;
+        }
+        @include for-sm{
+            left: 20px;
+        }
+        @include for-md-mob{
+            left: -24px;
         }
     }
 
@@ -1045,7 +1061,7 @@ button {
         }
     }
 
-    &__shoose {
+    &__choose {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -1054,13 +1070,39 @@ button {
             flex-direction: row;
             flex-wrap: wrap;
         }
-
-        @include for-md {
+        @include for-lg{
             flex-direction: column;
         }
-    }
 
-    &__shoose-item {
+        
+    }
+    &__choose-block{
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 28px;
+            height: 36px;
+            background-image: url(../images/icons/arrow-down.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            @include for-md-mob {
+                left: 5px;
+                transform: translateY(-50%) scale(.7);
+            }
+        }
+        @include for-xl {
+            width: 32.333333%;
+        }
+        @include for-lg {
+            width: 100%;
+        }
+    }
+    &__choose-item {
         display: inline-block;
         position: relative;
         padding: 15px 20px 15px 67px;
@@ -1073,11 +1115,11 @@ button {
         border-radius: 10px;
         border: none;
         cursor: pointer;
-
+        appearance: none;
+        width: 100%;
         @include for-xl {
             font-size: 40px;
             line-height: 44px;
-            width: 32.333333%;
         }
 
         @include for-md {
@@ -1095,26 +1137,11 @@ button {
             line-height: 26px;
         }
 
-        &:before {
-            content: '';
-            position: absolute;
-            width: 28px;
-            height: 36px;
-            background-image: url(../images/icons/arrow-down.png);
-            background-size: cover;
-            background-repeat: no-repeat;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-
-            @include for-md-mob {
-                left: 5px;
-                transform: translateY(-50%) scale(.7);
-            }
-        }
+        
     }
+    
 
-    &__shoose-item+&__shoose-item {
+    &__choose-block+&__choose-block {
         margin-top: 54px;
 
         @include for-xl {
@@ -1122,7 +1149,7 @@ button {
             margin-left: 10px;
         }
 
-        @include for-md {
+        @include for-lg {
             margin-left: 0;
             margin-top: 20px;
         }
