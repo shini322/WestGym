@@ -13,10 +13,10 @@ $orange: #ff9239;
 //   }
 
 @mixin for-xl {
-    @media (max-width: 1450px) { @content; }
+    @media (max-width: 1600px) { @content; }
   }
 @mixin for-lg {
-    @media (max-width: 1150px) { @content; }
+    @media (max-width: 1250px) { @content; }
  }
 //   @mixin for-lit-desktop {
 //     @media (max-width: 1050px) { @content; }
@@ -48,5 +48,5 @@ $orange: #ff9239;
 //     @media (min-width: 650px) { @content; }
 //   }
   @mixin for-lit-mob {
-    @media (max-width: 400px) { @content; }
+    @media (max-width: 450px) { @content; }
     }
