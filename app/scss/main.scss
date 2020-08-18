@@ -1790,12 +1790,15 @@ button {
         }
     }
     &__map{
-        @include for-sm{
-            height: 560px;
+        > ymaps{
+            @include for-sm{
+                height: 560px !important;
+            }
+            @include for-md-mob{
+                height: 300px !important;
+            }
         }
-        @include for-md-mob{
-            height: 300px;
-        }
+        
     }
 }
 
