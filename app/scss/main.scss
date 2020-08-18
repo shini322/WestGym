@@ -1045,7 +1045,7 @@ button {
         background-size: cover;
 
         @include for-xl {
-            padding: 100px 70px 40px;
+            padding: 100px 70px 40px 100px;
             flex-direction: column;
         }
 
@@ -1202,31 +1202,37 @@ button {
         }
     }
 
-    &__table-block {
-        @include for-md-mob {
-            position: relative;
-            width: 100%;
-            overflow-x: scroll;
+    &__block {
+        width: 100%;
+        max-width: 834px;
+        margin-left: 114px;
+        @include for-xl {
+            margin-left: 0;
+            margin: 40px auto 0;
+        }
+        
+        .is-fullwidth.is-schedule .mf-widget_reg .mf-widget__body{
+            @include for-md-mob {
+                padding-left: 7px;
+                padding-right: 47px;
+            }
+            
+        }
+        iframe{
+            @include for-sm{
+                transform: scale(.8);
+                transform-origin: top center;
+            }
         }
     }
 
     &__table {
-        width: 100%;
-        max-width: 834px;
-        margin-left: 114px;
         font-size: 22px;
         line-height: 26px;
         background-color: $white;
         font-family: 'Open Sans', sans-serif;
         border-spacing: 0;
         border: 1px solid $white;
-
-        @include for-xl {
-            margin-left: 0;
-            margin: 40px auto 0;
-        }
-
-
     }
 
     &__tr {
@@ -1486,8 +1492,7 @@ button {
     &__table-block {
         margin-top: 50px;
         margin-left: 65px;
-        height: 473px;
-        overflow-y: scroll;
+        overflow-x: scroll;
         max-width: 1400px;
         border: 1px solid #a2a2a2;
         width: 100%;
@@ -1803,21 +1808,38 @@ button {
 }
 
 .social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     &__item{
+        display: flex;
+        margin-right: 38px;
+        align-items: center;
+        justify-content: center;
+        width: 53px;
+        height: 53px;
+        border-radius: 50%;
         transition: .3s;
         &:hover{
             transform: rotate(360deg);
         }
         @include for-md-mob{
+            margin-right: 15px;
             transform: scale(.8);
         }
-    }
-    &__item+&__item {
-        margin-left: 38px;
-        @include for-md-mob{
-            margin-left: 15px;
+        
+        &--whatsup{
+
+            background-color: $white;
         }
     }
+    &__item-img{
+        &--whatsup{
+            width: 40px;
+            height: 40px;
+        }
+    }
+    
 }
 
 .footer {
