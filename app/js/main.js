@@ -65,11 +65,15 @@ function showYaMaps(){
  document.getElementById("YaMaps").appendChild(script);
 }
 
-$(".menu__list li a").on("click",  function (event) {
-    event.preventDefault();
-    $('.header__menu').slideToggle()
-    $('.nav-toggle').toggleClass('opened')
-    var id  = $(this).attr('href'),
-        top = $(id).offset().top;
-    $('body,html').animate({scrollTop: top}, 400);
-});
+
+if ( $(window).width() < 1025 ){
+    $(".menu__list li a").on("click",  function (event) {
+        event.preventDefault();
+        $('.header__menu').slideToggle()
+        $('.nav-toggle').toggleClass('opened')
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 400);
+    });
+}
+
