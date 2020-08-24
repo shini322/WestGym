@@ -4,6 +4,8 @@
   "description": "start gulp",
   "main": "index.js",
   "scripts": {
+    "build": "gulp build",
+    "dev": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Vadim Prokopchuk",
