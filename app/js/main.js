@@ -120,12 +120,9 @@ $('.action-btn').click(function(){
 //   e.stopPropagation();
 // });
 
-$(document).on('click', function(e) {
-  if (!$(e.target).closest(".action-btn").length) {
-    $('.action').animate({
-      right: '-150%',
-    });
-  }
-  e.stopPropagation();
+$('.action__close').click( function(){
+  $('.action').animate({
+    right: '-150%'
+  });
 });
 

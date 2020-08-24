@@ -1943,7 +1943,7 @@ button {
         padding: 20px 40px;
     }
     @include for-md-mob{
-        padding: 20px 15px;
+        padding: 40px 15px 20px;
     }
     &::before{
         content: '';
@@ -1957,6 +1957,40 @@ button {
         z-index: -1;
         @include for-md{
             transform: translate(-50%, -50%);
+        }
+    }
+    &__close{
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 20px;
+        right: 20px;
+        z-index: 20;
+        @include for-md{
+            width: 30px;
+            height: 30px;
+            top: 10px;
+            right: 10px;
+        }
+    }
+    &__close-left{
+        position: absolute;
+        border: 3px solid $white;
+        height: 40px;
+        transform: rotate(45deg);
+        left: 50%;
+        @include for-md{
+            height: 30px;
+        }
+    }
+    &__close-right{
+        position: absolute;
+        border: 3px solid $white;
+        height: 40px;
+        transform: rotate(-45deg);
+        left: 50%;
+        @include for-md{
+            height: 30px;
         }
     }
     &__title{
