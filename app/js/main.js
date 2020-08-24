@@ -20,11 +20,12 @@ $('.trainers__slider').slick({
     ]
 });
 
-<<<<<<< HEAD
+
 $(document).ready( function(){
   document.addEventListener('click', function(e) {
     var map = document.querySelector('.contacts__map > ymaps');
-=======
+  });
+});
 $('.nav-toggle').click(function() {
     $(this).toggleClass('opened');
     $('.header__menu').slideToggle()
@@ -36,7 +37,7 @@ $('.reviews__link').click(function() {
 
 document.addEventListener('click', function(e) {
     var map = document.querySelector('.contacts__map > ymaps')
->>>>>>> 0652faf86c9988bb436eb76a1ecddb7acab33ef3
+
     if(e.target.id === 'contacts__map') {
         map.style.pointerEvents = 'all';
     } else {
@@ -51,7 +52,7 @@ document.addEventListener('click', function(e) {
     } else {
         table.style.pointerEvents = 'none';
     }
-  });
+  
 });
 
 
