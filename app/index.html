@@ -149,9 +149,9 @@
                                     <img class="trainer-item__img" src="images/trainers/trainers-1.jpg" alt="">
                                 </a>
                                 <div class="trainer-item__text-block">
-                                    <div class="trainer-item__name">
+                                    <a class="trainer-item__name" href="#trainer-modal" data-fancybox="">
                                         Иван Иванов
-                                    </div>
+                                    </a>
                                     <div class="trainer-item__expiriens">
                                         Опыт работы 15 лет
                                     </div>
@@ -163,9 +163,9 @@
                                     <img class="trainer-item__img" src="images/trainers/trainers-1.jpg" alt="">
                                 </a>
                                 <div class="trainer-item__text-block">
-                                    <div class="trainer-item__name">
+                                    <a class="trainer-item__name" href="#trainer-modal" data-fancybox="">
                                         Иван Иванов
-                                    </div>
+                                    </a>
                                     <div class="trainer-item__expiriens">
                                         Опыт работы 15 лет
                                     </div>
@@ -177,9 +177,9 @@
                                     <img class="trainer-item__img" src="images/trainers/trainers-1.jpg" alt="">
                                 </a>
                                 <div class="trainer-item__text-block">
-                                    <div class="trainer-item__name">
+                                    <a class="trainer-item__name" href="#trainer-modal" data-fancybox="">
                                         Иван Иванов
-                                    </div>
+                                    </a>
                                     <div class="trainer-item__expiriens">
                                         Опыт работы 15 лет
                                     </div>
@@ -191,9 +191,9 @@
                                     <img class="trainer-item__img" src="images/trainers/trainers-1.jpg" alt="">
                                 </a>
                                 <div class="trainer-item__text-block">
-                                    <div class="trainer-item__name">
+                                    <a class="trainer-item__name" href="#trainer-modal" data-fancybox="">
                                         Иван Иванов
-                                    </div>
+                                    </a>
                                     <div class="trainer-item__expiriens">
                                         Опыт работы 15 лет
                                     </div>
@@ -205,9 +205,9 @@
                                     <img class="trainer-item__img" src="images/trainers/trainers-1.jpg" alt="">
                                 </a>
                                 <div class="trainer-item__text-block">
-                                    <div class="trainer-item__name">
+                                    <a class="trainer-item__name" href="#trainer-modal" data-fancybox="">
                                         Иван Иванов
-                                    </div>
+                                    </a>
                                     <div class="trainer-item__expiriens">
                                         Опыт работы 15 лет
                                     </div>
@@ -315,7 +315,7 @@
                                         </option>
                                     </select>
                                 </div>
-                                <a class="timetable__download" href="#">
+                                <a class="timetable__download" href="docs/rasp.pdf" download="">
                                     Скачать расписание
                                 </a>
                             </div>
@@ -418,7 +418,7 @@
                         <div class="reviews__row">
                             <div class="reviews__container">
                                 <div class="reviews-item reviews__item">
-                                    <div class="reviews-item__name">
+                                    <div class="reviews-item__name" href="#">
                                         Иван Иванов:
                                     </div>
                                     <p class="reviews-item__text">
@@ -444,7 +444,7 @@
                             </div>
                             <div class="reviews__container">
                                 <div class="reviews-item reviews__item">
-                                    <div class="reviews-item__name">
+                                    <div class="reviews-item__name" href="#">
                                         Иван Иванов:
                                     </div>
                                     <p class="reviews-item__text">
@@ -485,7 +485,7 @@
                             Цены
                         </h2>
                         <div class="price__row">
-                            <a class="price__download" href="#">
+                            <a class="price__download" href="docs/price_print.pdf" download="">
                                 Скачать прайс-лист
                             </a>
                             <div class="price__table-block">
@@ -728,6 +728,58 @@
             <a class="action__button" href="#">
                 Купить абонемент
             </a>
+        </div>
+        
+        <div class="trainer-modal" id="trainer-modal">
+            <div class="trainer-modal__title">
+                Иван Иванов
+            </div>
+            <div class="trainer-modal__close" data-fancybox-close>
+                X
+            </div>
+            <div class="trainer-modal__inner">
+                <div class="trainer-modal__img-block">
+                    <img class="trainer-modal__img" src="images/trainers/trainers-1.jpg" alt="">
+                </div>
+                <div class="trainer-modal__text-block">
+                    <div class="trainer-modal__expiriens">
+                        Опыт работы: <span class="trainer-modal__expiriens--total">10 лет</span>
+                    </div>
+                    <div class="trainer-modal__about">
+                        О тренере:
+                    </div>
+                    <p class="trainer-modal__text">
+                        Спортивно-педагогический колледж (с Отличием!) <br> 
+                        Молодой специалист по работе с детьми. <br>
+                        Призер международного конкурса молодых <br>
+                        специалистов WorldSkillsRussia
+                    </p>
+                    <ol class="trainer-modal__list">
+                        <li class="trainer-modal__list-item">
+                            Мастер Спорта Международного класса по спортивной акробатике
+                        </li>
+                        <li class="trainer-modal__list-item">
+                            Победитель Международного старта в Казахстане
+                        </li>
+                        <li class="trainer-modal__list-item">
+                            Чемпионка России
+                        </li>
+                        <li class="trainer-modal__list-item">
+                            Чемпионка Кубка России
+                        </li>
+                        <li class="trainer-modal__list-item">
+                            Чемпионка первенства России
+                        </li>
+                        <li class="trainer-modal__list-item">
+                            Многочисленная чемпионка Москвы
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="trainer-modal__arrows">
+                <button class="trainer-modal__arrow trainer-modal__arrow-left" data-fancybox-prev> << <span class="trainer-modal__arrow--text-mobile">Пётр Петров</span>  </button>
+                <button class="trainer-modal__arrow trainer-modal__arrow-right" data-fancybox-next><span class="trainer-modal__arrow--text-mobile">Ксения Черных</span> >></button>
+            </div>
         </div>
 
     </div>

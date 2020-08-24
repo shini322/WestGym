@@ -20,28 +20,32 @@ $('.trainers__slider').slick({
     ]
 });
 
-$('.nav-toggle').click(function() {
+$(document).ready( function(){
+  document.addEventListener('click', function(e) {
+    var map = document.querySelector('.contacts__map > ymaps');
+    if(e.target.id === 'contacts__map') {
+        map.style.pointerEvents = 'all';
+    } else {
+        map.style.pointerEvents = 'none';
+    }
+  });
+
+  document.addEventListener('click', function(e) {
+    var table = document.querySelector('.price__table');
+    if(e.target.id === 'price__table') {
+        table.style.pointerEvents = 'all';
+    } else {
+        table.style.pointerEvents = 'none';
+    }
+  });
+});
+
+
+
+  $('.nav-toggle').click(function() {
     $(this).toggleClass('opened');
     $('.header__menu').slideToggle()
 });
-
-document.addEventListener('click', function(e) {
-    var map = document.querySelector('.contacts__map > ymaps')
-    if(e.target.id === 'contacts__map') {
-        map.style.pointerEvents = 'all'
-    } else {
-        map.style.pointerEvents = 'none'
-    }
-  })
-
-  document.addEventListener('click', function(e) {
-    var table = document.querySelector('.price__table')
-    if(e.target.id === 'price__table') {
-        table.style.pointerEvents = 'all'
-    } else {
-        table.style.pointerEvents = 'none'
-    }
-  })
 
 
   let YaMapsShown = false;
@@ -106,8 +110,9 @@ $('.action-btn').click(function(){
 $(document).on('click', function(e) {
   if (!$(e.target).closest(".action-btn").length) {
     $('.action').animate({
-      right: '-100%'
+      right: '-150%',
     });
   }
   e.stopPropagation();
 });
+

@@ -1,8 +1,8 @@
 @import "_vars";
 @import "_libs";
 @import "_fonts";
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
 *,
 *::before,
@@ -21,9 +21,7 @@ body {
     font-size: 21px;
     line-height: 25px;
     font-weight: 300;
-    overflow-x: hidden;
-
-
+    // overflow-x: hidden;
     @include for-md {
         font-size: 18px;
         line-height: 22px;
@@ -57,6 +55,7 @@ footer {
     height: 100%;
     width: 100%;
     max-width: 100%;
+    overflow: hidden;
 
     @include for-md {
 
@@ -111,10 +110,10 @@ button {
 .nav-toggle {
     position: absolute;
     display: none;
-    z-index: 15;
+    z-index:50;
     right: 15px;
     top: 15px;
-
+    
     @include for-md {
         display: block;
     }
@@ -140,6 +139,7 @@ button {
 .nav-toggle .bar-bot {
     margin-bottom: 0;
 }
+
 
 .opened .bar-top {
     background-color: $white;
@@ -334,7 +334,7 @@ button {
             background-color: $orange;
             max-width: 100%;
             border-radius: 0 0 10px 10px;
-            z-index: 10;
+            z-index: 40;
         }
     }
 
@@ -839,7 +839,7 @@ button {
 
     &__text-block {
         margin-top: 35px;
-
+        text-align: center;
         @include for-sm {
             margin-top: 25px;
         }
@@ -1882,6 +1882,21 @@ button {
     font-size: 60px;
     line-height: 64px;
     color: $white;
+    z-index: 10;
+    @include for-xl{
+        top: 370px;
+    }
+    @include for-sm{
+        padding: 20px 30px;
+        font-size: 40px;
+        line-height: 44px;
+    }
+    @include for-md-mob{
+        padding: 10px;
+        font-size: 20px;
+        line-height: 24px;
+        top: 275px;
+    }
     &:before{
         content: '';
         position: absolute;
@@ -1897,14 +1912,25 @@ button {
 }
 .action{
     position: absolute;
-    padding: 57px 237px 41px;
-    
+    padding: 57px 150px 41px 160px ;
     top: 275px;
-    right: -100%;
+    right: -150%;
     text-align: center;
     color: $white;
     z-index: 20;
-    // display: none;
+    @include for-lg{
+        padding: 30px 100px 20px 170px;
+    }
+    @include for-md{
+        width: 100%;
+        padding: 30px 70px 20px;
+    }
+    @include for-sm{
+        padding: 20px 40px;
+    }
+    @include for-md-mob{
+        padding: 20px 15px;
+    }
     &::before{
         content: '';
         position: absolute;
@@ -1915,6 +1941,9 @@ button {
         transform: skewX(-14deg) translate(-50%, -50%);
         background-color: $pink;
         z-index: -1;
+        @include for-md{
+            transform: translate(-50%, -50%);
+        }
     }
     &__title{
         margin-bottom: 15px;
@@ -1922,32 +1951,76 @@ button {
         font-size: 48px;
         line-height: 52px;
         text-transform: uppercase;
+        @include for-md{
+            font-size: 38px;
+            line-height: 42px;
+        }
+        @include for-md-mob{
+            margin-bottom: 5px;
+            font-size: 28px;
+            line-height: 32px;
+        }
     }
     &__subtitle{
         margin-bottom: 20px;
         font-size: 40px;
         line-height: 44px;
+        @include for-md{
+            font-size: 36px;
+            line-height: 40px;
+        }
+        @include for-md-mob{
+            font-size: 20px;
+            line-height: 24px;
+        }
     }
     &__row{
         display: flex;
         align-items: center;
         margin: 0 auto;
         max-width: 715px;
+        @include for-sm{
+            flex-direction: column;
+        }
     }
     &__item{
         &:nth-child(2n){
             margin-left: auto;
+            @include for-sm{
+                margin-left: 0;
+            }
+        }
+    }
+    &__item + &__item{
+        @include for-sm{
+            margin-top: 20px;
         }
     }
     &__item-text{
         font-size: 40px;
         line-height: 44px;
+        @include for-md{
+            font-size: 28px;
+            line-height: 32px;
+        }
+        @include for-md-mob{
+            font-size: 22px;
+            line-height: 28px;
+        }
     }
     &__discount{
         font-weight: 600;
         font-size: 88px;
         line-height: 92px;
         color: $orange;
+        @include for-md{
+            font-size: 70px;
+            line-height: 78px;
+        }
+        @include for-md-mob{
+            font-size: 50px;
+            line-height: 54px;
+        }
     }
     &__button {
         position: relative;
@@ -1967,7 +2040,6 @@ button {
                 width: 0;
             }
         }
-
         &:before {
             content: '';
             position: absolute;
@@ -1999,5 +2071,245 @@ button {
             transition: .3s;
             z-index: -1;
         }
+        @include for-md{
+            padding: 20px 30px;
+            font-size: 32px;
+            line-height: 36px;
+        }
+        @include for-md-mob{
+            padding: 15px 20px;
+            font-size: 24px;
+            line-height: 28px;
+        }
     }
-}    
+}
+
+.trainer-modal{
+    position: relative;
+    display: none;
+    padding: 113px 200px 90px 0;
+    background-color: transparent;
+    overflow: visible;
+    @include for-lg{
+        padding: 113px 70px 90px;
+    }
+    @include for-md{
+        padding: 170px 60px 50px;
+    }
+    @include for-md-mob{
+        padding: 160px 25px 50px;
+    }
+    &:before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        border: 20px solid #f95621;
+        background-color: $white;
+        transform: translate(-50%, -50%) skewX(170deg);
+        z-index: -1;
+        @include for-md{
+            transform: translate(-50%, -50%);
+        }
+        @include for-md-mob{
+            border-width: 10px;
+        }
+    }
+    &__title{
+        position: absolute;
+        padding: 20px 223px 20px 60px;
+        top: 0;
+        left: 0;
+        font-size: 48px;
+        line-height: 52px;
+        font-size: 300;
+        color: $white;
+        text-transform: uppercase;
+        transform: translateY(-40%);
+        z-index: 10;
+        &:before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform: skewX(-14deg) translate(-50%, -50%);
+            background-color: $orange;
+            top: 50%;
+            left: 50%;
+            z-index: -1;
+            @include for-md{
+                transform: translate(-50%, -50%);
+            }
+        }
+        @include for-md{
+            top:70px;
+            transform: none;
+        }
+        @include for-sm{
+            width: 100%;
+            padding: 15px;
+            font-size: 38px;
+            line-height: 42px;
+            text-align: center;
+        }
+    }
+    &__close{
+        position: absolute;
+        padding: 30px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        color: $white;
+        font-size: 48px;
+        line-height: 52px;
+        text-align: center;
+        transform: translateY(-50%);
+        right: 0;
+        top: 0;
+        cursor: pointer;
+        @include for-md{
+            font-size: 32px;
+            line-height: 36px;
+            transform: none;
+            padding: 10px;
+        }
+        &:before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform: skewX(-14deg) translate(-45%, -50%);
+            background-color: $orange;
+            top: 50%;
+            z-index: -1;
+            @include for-md{
+                transform: translate(-50%, -50%);
+                left: 50%;
+            }
+        }
+    }
+    &__inner{
+        display: flex;
+        align-items: flex-start;
+        @include for-md{
+            flex-direction: column;
+        }
+    }
+    &__img-block{
+        max-width: 448px;
+        height: 497px;
+        border: 5px solid #fff;
+        border-radius: 3px;
+        flex-shrink: 0;
+        @include for-md{
+            margin: 0 auto;
+        }
+        @include for-md-mob{
+            height: 300px;
+        }
+    }
+    &__img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__text-block{
+        margin-left: 113px;
+        max-width: 784px;
+        @include for-lg{
+            margin-left: 50px;
+        }
+        @include for-md{
+            margin-left: 0;
+            margin-top: 20px;
+        }
+    }
+    &__expiriens{
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 34px;
+        color: #f95621;
+        &--total{
+            color: $black;
+        }
+        @include for-md-mob{
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+    &__about{
+        font-size: 24px;
+        line-height: 28px;
+        color: $orange;
+        font-weight: 400;
+        font-family: 'Open Sans', sans-serif;
+        @include for-md-mob{
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+    &__text{
+        margin-bottom: 20px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 24px;
+        line-height: 28px;
+        @include for-md-mob{
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+    &__list{
+        margin-left: 1em;
+        font-family: 'Open Sans', sans-serif;
+        @include for-md-mob{
+            font-size: 15px;
+            line-height: 19px;
+        }
+    }
+    
+    .fancybox-close-small{
+        display: none;
+    }
+    .fancybox-navigation{
+        display: none;
+    }
+    &__arrows{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 40px;
+        * + * {
+            margin-left: 80px;
+        }
+        @include for-md{
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        @include for-sm{
+            font-size: 28px;
+            line-height: 32px;
+        }
+        @include for-md-mob{
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+    &__arrow{
+        border-bottom: 1px solid $orange;
+        color: $orange;
+        cursor: pointer;
+        &:hover{
+            border-color: transparent;
+        }
+    
+    }
+}
+.fancybox-can-swipe .fancybox-content, .fancybox-can-pan .fancybox-content{
+    cursor: auto;
+}
