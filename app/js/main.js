@@ -57,10 +57,6 @@ document.addEventListener('click', function(e) {
 
 
 
-  $('.nav-toggle').click(function() {
-    $(this).toggleClass('opened');
-    $('.header__menu').slideToggle()
-});
 
 
   let YaMapsShown = false;
