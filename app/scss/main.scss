@@ -1345,6 +1345,10 @@ button {
             width: 100%;
             padding-right: 0;
         }
+
+        &:nth-child(n + 5){
+            display: none;
+        }
     }
 
     &__item {
@@ -1368,7 +1372,17 @@ button {
         line-height: 40px;
         color: $orange;
         border-bottom: 1px solid $orange;
+        cursor: pointer;
         transition: .3s;
+        &:before{
+            content: 'Все отзывы';
+        }
+
+        &.opened{
+            &:before{
+                content: 'Скрыть';
+            }
+        }
 
         &:hover {
             border-color: transparent;
@@ -2001,3 +2015,10 @@ button {
         }
     }
 }    
+
+
+
+.modal-content{
+    max-width: 800px;
+    width: 100%;
+}

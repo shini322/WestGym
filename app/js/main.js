@@ -24,6 +24,10 @@ $('.nav-toggle').click(function() {
     $(this).toggleClass('opened');
     $('.header__menu').slideToggle()
 });
+$('.reviews__link').click(function() {
+  $(this).toggleClass('opened');
+  $('.reviews__container:nth-child(n+5)').slideToggle()
+});
 
 document.addEventListener('click', function(e) {
     var map = document.querySelector('.contacts__map > ymaps')
@@ -67,7 +71,7 @@ function showYaMaps(){
 
 
 
-    $(".menu__list li a").on("click",  function (event) {
+    $(".menu__list li a:not([data-fancybox]").on("click",  function (event) {
         event.preventDefault();
         if ( $(window).width() < 1025 ){
             $('.header__menu').slideToggle()
