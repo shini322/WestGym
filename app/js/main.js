@@ -26,10 +26,12 @@ $(document).ready( function(){
     var map = document.querySelector('.contacts__map > ymaps');
   });
 });
+
 $('.nav-toggle').click(function() {
     $(this).toggleClass('opened');
     $('.header__menu').slideToggle()
 });
+
 $('.reviews__link').click(function() {
   $(this).toggleClass('opened');
   $('.reviews__container:nth-child(n+5)').slideToggle()
