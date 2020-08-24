@@ -1345,6 +1345,10 @@ button {
             width: 100%;
             padding-right: 0;
         }
+
+        &:nth-child(n + 5){
+            display: none;
+        }
     }
 
     &__item {
@@ -1368,7 +1372,17 @@ button {
         line-height: 40px;
         color: $orange;
         border-bottom: 1px solid $orange;
+        cursor: pointer;
         transition: .3s;
+        &:before{
+            content: 'Все отзывы';
+        }
+
+        &.opened{
+            &:before{
+                content: 'Скрыть';
+            }
+        }
 
         &:hover {
             border-color: transparent;
@@ -2196,6 +2210,7 @@ button {
             flex-direction: column;
         }
     }
+<<<<<<< HEAD
     &__img-block{
         max-width: 448px;
         height: 497px;
@@ -2312,4 +2327,13 @@ button {
 }
 .fancybox-can-swipe .fancybox-content, .fancybox-can-pan .fancybox-content{
     cursor: auto;
+=======
+}    
+
+
+
+.modal-content{
+    max-width: 800px;
+    width: 100%;
+>>>>>>> 0652faf86c9988bb436eb76a1ecddb7acab33ef3
 }
