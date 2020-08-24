@@ -64,7 +64,7 @@ gulp.task('browser-sync', function() {
   });
 });
 
-gulp.task('export', function(){
+gulp.task('export', function(cb){
   let buildHtml = gulp.src('app/**/*.html')
     .pipe(gulp.dest('dist'));
 
@@ -78,9 +78,16 @@ gulp.task('export', function(){
     .pipe(gulp.dest('dist/fonts'));
 
   let BuildImg = gulp.src('app/img/**/*.*')
-    .pipe(gulp.dest('dist/img'));   
-});
+    .pipe(gulp.dest('dist/img'));
 
+  let BuildImg2 = gulp.src('app/images/**/*.*')
+      .pipe(gulp.dest('dist/images'));
+
+  let BuildFiles = gulp.src('app/docs/**/*.*')
+      .pipe(gulp.dest('dist/docs'));
+
+  cb();
+});
 gulp.task('watch', function(){
   gulp.watch('app/scss/**/*.scss', gulp.parallel('scss'));
   gulp.watch('app/*.html', gulp.parallel('html'))
