@@ -44,7 +44,7 @@ document.addEventListener('click', function(e) {
   })
 
 
-  YaMapsShown = false;
+  let YaMapsShown = false;
 
 
   $(window).scroll(function() {
@@ -87,3 +87,27 @@ window.onload = function(){
    document.getElementById('personal_widget_frame_csn').src = 'http://mobifitness.ru/schedule-widget/?code=418871&type=schedule&club=3761&host=mobifitness.ru&version=v6&direction=0&group=0&activity=0&trainer=0&room=0&age=&level=&year=0&week=0&icons=&test=0&debug=0&desc=&language=&shopAuth=0&parent=http://localhost:3000/?mfw_csn';
  },2000);
 };
+
+$('.action-btn').click(function(){
+  $(".action").animate({
+    right: 0
+  });
+});
+
+// $(document).on('click', function(e) {
+//   if (!$(e.target).closest(".action").length) {
+//     $('.action').animate({
+//       right: '-100%'
+//     });
+//   }
+//   e.stopPropagation();
+// });
+
+$(document).on('click', function(e) {
+  if (!$(e.target).closest(".action-btn").length) {
+    $('.action').animate({
+      right: '-100%'
+    });
+  }
+  e.stopPropagation();
+});
