@@ -26,10 +26,12 @@ $(document).ready( function(){
     var map = document.querySelector('.contacts__map > ymaps');
   });
 });
+
 $('.nav-toggle').click(function() {
     $(this).toggleClass('opened');
     $('.header__menu').slideToggle()
 });
+
 $('.reviews__link').click(function() {
   $(this).toggleClass('opened');
   $('.reviews__container:nth-child(n+5)').slideToggle()
@@ -75,13 +77,10 @@ $('.action-btn').click(function(){
 //   e.stopPropagation();
 // });
 
-$(document).on('click', function(e) {
-  if (!$(e.target).closest(".action-btn").length) {
-    $('.action').animate({
-      right: '-150%',
-    });
-  }
-  e.stopPropagation();
+$('.action__close').click( function(){
+  $('.action').animate({
+    right: '-150%'
+  });
 });
 
 
