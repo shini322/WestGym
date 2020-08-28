@@ -149,7 +149,7 @@
                                     <img class="trainer-item__img" src="images/trainers/trainers-1.jpg" alt="">
                                 </a>
                                 <div class="trainer-item__text-block">
-                                    <a class="trainer-item__name" href="#trainer-modal" data-fancybox="">
+                                    <a class="trainer-item__name" data-fancybox="group" rel="group" data-src="#trainer-modal" href="javascript:;">
                                         Иван Иванов
                                     </a>
                                     <div class="trainer-item__expiriens">
@@ -163,7 +163,7 @@
                                     <img class="trainer-item__img" src="images/trainers/trainers-1.jpg" alt="">
                                 </a>
                                 <div class="trainer-item__text-block">
-                                    <a class="trainer-item__name" href="#trainer-modal" data-fancybox="">
+                                    <a class="trainer-item__name"data-fancybox="group" rel="group" data-src="#trainer-modal2" href="javascript:;">
                                         Иван Иванов
                                     </a>
                                     <div class="trainer-item__expiriens">
@@ -177,7 +177,7 @@
                                     <img class="trainer-item__img" src="images/trainers/trainers-1.jpg" alt="">
                                 </a>
                                 <div class="trainer-item__text-block">
-                                    <a class="trainer-item__name" href="#trainer-modal" data-fancybox="">
+                                    <a class="trainer-item__name" >
                                         Иван Иванов
                                     </a>
                                     <div class="trainer-item__expiriens">
@@ -191,7 +191,7 @@
                                     <img class="trainer-item__img" src="images/trainers/trainers-1.jpg" alt="">
                                 </a>
                                 <div class="trainer-item__text-block">
-                                    <a class="trainer-item__name" href="#trainer-modal" data-fancybox="">
+                                    <a class="trainer-item__name">
                                         Иван Иванов
                                     </a>
                                     <div class="trainer-item__expiriens">
@@ -205,7 +205,7 @@
                                     <img class="trainer-item__img" src="images/trainers/trainers-1.jpg" alt="">
                                 </a>
                                 <div class="trainer-item__text-block">
-                                    <a class="trainer-item__name" href="#trainer-modal" data-fancybox="">
+                                    <a class="trainer-item__name" >
                                         Иван Иванов
                                     </a>
                                     <div class="trainer-item__expiriens">
@@ -786,6 +786,57 @@
         </div>
         
         <div class="trainer-modal" id="trainer-modal">
+            <div class="trainer-modal__title">
+                Иван Иванов
+            </div>
+            <div class="trainer-modal__close" data-fancybox-close>
+                X
+            </div>
+            <div class="trainer-modal__inner">
+                <div class="trainer-modal__img-block">
+                    <img class="trainer-modal__img" src="images/trainers/trainers-1.jpg" alt="">
+                </div>
+                <div class="trainer-modal__text-block">
+                    <div class="trainer-modal__expiriens">
+                        Опыт работы: <span class="trainer-modal__expiriens--total">10 лет</span>
+                    </div>
+                    <div class="trainer-modal__about">
+                        О тренере:
+                    </div>
+                    <p class="trainer-modal__text">
+                        Спортивно-педагогический колледж (с Отличием!) <br> 
+                        Молодой специалист по работе с детьми. <br>
+                        Призер международного конкурса молодых <br>
+                        специалистов WorldSkillsRussia
+                    </p>
+                    <ol class="trainer-modal__list">
+                        <li class="trainer-modal__list-item">
+                            Мастер Спорта Международного класса по спортивной акробатике
+                        </li>
+                        <li class="trainer-modal__list-item">
+                            Победитель Международного старта в Казахстане
+                        </li>
+                        <li class="trainer-modal__list-item">
+                            Чемпионка России
+                        </li>
+                        <li class="trainer-modal__list-item">
+                            Чемпионка Кубка России
+                        </li>
+                        <li class="trainer-modal__list-item">
+                            Чемпионка первенства России
+                        </li>
+                        <li class="trainer-modal__list-item">
+                            Многочисленная чемпионка Москвы
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="trainer-modal__arrows">
+                <button class="trainer-modal__arrow trainer-modal__arrow-left" data-fancybox-prev> << <span class="trainer-modal__arrow--text-mobile">Пётр Петров</span>  </button>
+                <button class="trainer-modal__arrow trainer-modal__arrow-right" data-fancybox-next><span class="trainer-modal__arrow--text-mobile">Ксения Черных</span> >></button>
+            </div>
+        </div>
+        <div class="trainer-modal" id="trainer-modal2">
             <div class="trainer-modal__title">
                 Иван Иванов
             </div>

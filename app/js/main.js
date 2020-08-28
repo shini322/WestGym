@@ -35,50 +35,7 @@ $('.reviews__link').click(function() {
   $('.reviews__container:nth-child(n+5)').slideToggle()
 });
 
-document.addEventListener('click', function(e) {
-    var map = document.querySelector('.contacts__map > ymaps')
 
-    if(e.target.id === 'contacts__map') {
-        map.style.pointerEvents = 'all';
-    } else {
-        map.style.pointerEvents = 'none';
-    }
-  });
-
-  document.addEventListener('click', function(e) {
-    var table = document.querySelector('.price__table');
-    if(e.target.id === 'price__table') {
-        table.style.pointerEvents = 'all';
-    } else {
-        table.style.pointerEvents = 'none';
-    }
-  
-});
-
-
-
-
-
-  let YaMapsShown = false;
-
-
-  $(window).scroll(function() {
-    if (!YaMapsShown){
-     if($(window).scrollTop() + $(window).height() > $(document).height() - 1000) {      
-      showYaMaps();
-      YaMapsShown = true;
-     }
-    }
- });
-
-
-function showYaMaps(){
- var script   = document.createElement("script");
- script.type  = "text/javascript";
- 
- script.src   = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac0a7bb6f633ae5e9d206346727914b341ce954f59ef3e267f2fdc0d778ea8f5e&amp;width=100%25&amp;height=683&amp;lang=ru_RU&amp;scroll=true";
- document.getElementById("YaMaps").appendChild(script);
-}
 
 
 
@@ -127,3 +84,46 @@ $(document).on('click', function(e) {
   e.stopPropagation();
 });
 
+
+// $(window).scroll(function() {
+//   if (!YaMapsShown){
+//    if($(window).scrollTop() + $(window).height() > $(document).height() - 1000) {      
+//     showYaMaps();
+//     YaMapsShown = true;
+//    }
+//   }
+// });
+
+// document.addEventListener('click', function(e) {
+// var map = document.querySelector('.contacts__map > ymaps')
+
+// if(e.target.id === 'contacts__map') {
+//     map.style.pointerEvents = 'all';
+// } else {
+//     map.style.pointerEvents = 'none';
+// }
+// });
+
+document.addEventListener('click', function(e) {
+var table = document.querySelector('.price__table');
+if(e.target.id === 'price__table') {
+    table.style.pointerEvents = 'all';
+} else {
+    table.style.pointerEvents = 'none';
+}
+
+});
+
+
+
+
+
+// let YaMapsShown = false;
+
+// function showYaMaps(){
+// var script   = document.createElement("script");
+// script.type  = "text/javascript";
+
+// script.src   = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac0a7bb6f633ae5e9d206346727914b341ce954f59ef3e267f2fdc0d778ea8f5e&amp;width=100%25&amp;height=683&amp;lang=ru_RU&amp;scroll=true";
+// document.getElementById("YaMaps").appendChild(script);
+// }
