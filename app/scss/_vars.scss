@@ -48,5 +48,5 @@ $orange: #ff9239;
 //     @media (min-width: 650px) { @content; }
 //   }
   @mixin for-lit-mob {
-    @media (max-width: 450px) { @content; }
+    @media (max-width: 365px) { @content; }
     }
