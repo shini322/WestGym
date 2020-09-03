@@ -2381,6 +2381,9 @@ button {
 
 .why-we{
     padding-top: 100px;
+    @include for-md{
+        padding-top: 50px;
+    }
     &__title{
         padding: 5px 15px;
     }
